@@ -1,6 +1,7 @@
 package fr.unilim.iut.kebabvisitor.ingredients;
 
 import fr.unilim.iut.kebabvisitor.Kebab;
+import visitor.VisiteurDeRegime;
 
 public class Boeuf extends Ingredient{
 	
@@ -18,4 +19,7 @@ public class Boeuf extends Ingredient{
         return false;
     }
     
+    public void accept(VisiteurDeRegime v) {
+    	v.accept(this);
+    }
 }

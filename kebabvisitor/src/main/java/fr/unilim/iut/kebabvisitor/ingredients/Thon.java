@@ -1,6 +1,7 @@
 package fr.unilim.iut.kebabvisitor.ingredients;
 
 import fr.unilim.iut.kebabvisitor.Kebab;
+import visitor.VisiteurDeRegime;
 
 public class Thon extends Ingredient {
 
@@ -18,5 +19,8 @@ public class Thon extends Ingredient {
 	public boolean isPescetarien() {
 		return super.isPescetarien();
 	}
-
+	
+	public void accept(VisiteurDeRegime v) {
+		v.accept(this);
+	}
 }

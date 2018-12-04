@@ -1,6 +1,7 @@
 package fr.unilim.iut.kebabvisitor.ingredients;
 
 import fr.unilim.iut.kebabvisitor.Kebab;
+import visitor.VisiteurDeRegime;
 
 public class Crevette extends Ingredient {
 
@@ -25,6 +26,10 @@ public class Crevette extends Ingredient {
         Donc, dans le contexte de ce projet, si on voulait optimiser l'écriture du programme, 
         ce ne serait même pas la peine d'écrire (de redéfinir) dans cette classe isPescetarien
         car son comportement n'apporte rien de nouveau ... ;-) */
+    }
+    
+    public void accept(VisiteurDeRegime v) {
+    	v.accept(this);
     }
     
  
